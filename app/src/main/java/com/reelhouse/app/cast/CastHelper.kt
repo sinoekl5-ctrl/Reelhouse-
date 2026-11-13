@@ -48,7 +48,7 @@ object CastHelper {
         val url = StreamServer.urlFor(ctx, movie.id, movie.fileName)
             ?: return "Your phone must be connected to Wi-Fi (the same network as the TV) to cast."
 
-        val meta = MediaMetadata(MediaMetadata.METADATA_TYPE_MOVIE)
+        val meta = MediaMetadata(MediaMetadata.MEDIA_TYPE_MOVIE)
         meta.putString(MediaMetadata.KEY_TITLE, movie.title)
         val builder = MediaInfo.Builder(url)
             .setStreamType(MediaInfo.STREAM_TYPE_BUFFERED)
